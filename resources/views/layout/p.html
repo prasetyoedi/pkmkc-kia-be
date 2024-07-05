@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left Sidebar Example</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Hide toggle button on larger screens */
+        @media (min-width: 768px) {
+            .navbar-toggler {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-light 
+                bg-success border-bottom-0">
+        <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#sidebar" aria-controls="sidebar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
+    <div class="offcanvas offcanvas-start 
+                bg-success d-md-block" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-light" id="sidebarLabel">GFG Sidebar</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-none 
+                        d-md-block bg-light sidebar">
+                <div class="position-sticky 
+                            bg-success vh-100">
+                    <div class="pt-3">
+                        <h6 class="sidebar-heading d-flex 
+                                justify-content-between 
+                                align-items-center px-3 
+                                mt-4 mb-1 text-muted">
+                            <span class="text-light">
+                                GFG sidebar
+                            </span>
+                        </h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active 
+                                        text-light" href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="#">
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <main class="col-md-9 ms-sm-auto
+                        col-lg-10 px-md-4 ">
+                <div class="pt-3">
+                    <h2 class="text-primary">
+                        TypeScript
+                    </h2>
+                    <p class="text-success">
+                        Responsive sidebar menu to
+                        top navbar in Bootstrap 5
+                    </p>
+                    <p class="text-success">
+                        TypeScript is a strict superset
+                        of JavaScript, which means anything
+                        that is implemented in JavaScript
+                        can be implemented using TypeScript
+                        along with the choice of adding
+                        enhanced features. It is an Open Source
+                        Object Oriented programming language and
+                        strongly typed language. As TS code is
+                        converted to JS code it makes it easier
+                        to integrate into JavaScript projects.
+                        The TypeScript Tutorial provides the
+                        complete guide from beginner to
+                        advanced level.
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+
+</html>
